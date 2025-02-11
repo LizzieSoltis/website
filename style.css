@@ -1,0 +1,302 @@
+:root {
+    --bg-color: #f4ece0;
+    --bg2-color: #f1dec2;
+    --text-color: #485849;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
+body.dark-mode {
+    --bg-color: #485849;
+    --bg2-color: #1c2b1e;
+    --text-color: #f4ece0;
+}
+  
+#darkModeContainer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+#darkModeToggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    color: var(--text-color); /* This ensures the SVG color changes with mode */
+  }
+  
+  #darkModeToggle:hover {
+    background-color: rgba(72, 88, 73, 0.1); /* Light mode hover */
+  }
+  
+  body.dark-mode #darkModeToggle:hover {
+    background-color: rgba(244, 236, 224, 0.1); /* Dark mode hover */
+  }
+header {
+
+    text-align: center;
+
+    margin-top: 30px;
+
+}
+
+/* ... (keep your existing styles) ... */
+
+nav {
+    background-color: var(--bg-color);
+    padding: 1rem 0;
+    border-top: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+}
+
+.nav-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-menu li {
+    margin: 0 1rem;
+}
+
+.nav-menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover, .nav-menu a:focus {
+    text-decoration: underline;
+    color: #bfb5a5;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 0.5rem 0;
+    }
+
+    .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin: 0 auto;
+    }
+
+    .nav-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--text-color);
+        margin: 5px auto;
+    }
+}
+
+
+h1 {
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+img {
+
+    width: 200px;
+
+    height: 200px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+section {
+
+    margin-bottom: 40px;
+    display: none; /* Initially hide all sections */
+}
+
+
+
+h2 {
+
+    font-size: 24px;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+ul {
+
+    margin-left: 20px;
+
+}
+
+
+
+a {
+
+    color: #bfb5a5;
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth color transition for hover effects */
+
+}
+
+a:hover, a:focus {
+    text-decoration: underline; /* Adds underline on hover or focus */
+    color: #f4ece0; /* Brightens the color on hover for better visibility */
+}
+
+iframe {
+
+    display: block;
+
+    margin: 0 auto;
+
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .portfolio-item {
+    background-color: var(--bg2-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s,background-color 0.3s, color 0.3s, box-shadow 0.3s
+  }
+  
+  .portfolio-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .portfolio-item h3, .portfolio-item p {
+    padding: 0.5rem 1rem;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .design-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .project-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    background-color: #24292e;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .project-link:hover {
+    background-color: #2f363d;
+  }
+  
+  .github-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .design-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  
+  .design-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 65, 44, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .design-container:hover .design-overlay {
+    opacity: 1;
+  }
+  
+  .download-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .download-btn:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f0;
+  }
+  
+  .download-btn svg {
+    width: 16px;
+    height: 16px;
+  }

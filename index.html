@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="star.png" sizes="32x32">
+</head>
+<body>
+    <div id="darkModeContainer">
+        <button id="darkModeToggle" aria-label="Toggle dark mode">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    <header>
+
+        <h1>Lizzie Soltis</h1>
+
+        <img src="mypic.jpg" alt="Your Name">
+    </header>
+    <nav>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+    </nav>
+    <main>
+            <h2>Home</h2>
+            <hr>
+            <h2>Other Links:</h2>
+            <li><a href="https://www.github.com/LizzieSoltis" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://lizzielinn.com" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
+            <li><a href="./ViolaREADME.pdf" download="ESoltis_ViolaDocumentation">Viola Documentation</a></li>
+            <hr>
+    </main>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        
+        // Get the element with id="defaultOpen" and click on it to open it by default
+        document.getElementById("defaultOpen").click();
+        </script>
+        <script src="script.js"></script>
+</body>
+</html>
