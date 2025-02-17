@@ -330,7 +330,7 @@ iframe {
     padding: 10px;      /* Inner spacing */
     max-width: 800px;   /* Prevents stretching too wide */
     border-radius: 8px; /* Rounds corners */
-    background-color: var(--nav-color);
+    background-color: var(--container-color);
     border: 1px solid var(--h-color);
   }
   .bubble-container {
