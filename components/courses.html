@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses</title>
-    <link rel="icon" type="image/png" href="star.png" sizes="32x32">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="../assets/star.png" sizes="32x32">
+    <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
     <div id="darkModeContainer">
@@ -15,9 +15,12 @@
           </svg>
         </button>
     </div>
-    <h2>Relevant Courses:</h2>
-    <ul>
-        <h3>Computer Science:</h3>
+    <h1 class="centered">Relevant Courses:</h1>
+    <div class="content-container">
+      <h3>Computer Science:</h3>
+      <hr>
+      <div class="bubble-container">
+        <ul>
         <li>Calculus 1, 2, 3</li>
         <li>Linear Algebra</li>
         <li>Probability and Statistics</li>
@@ -31,14 +34,21 @@
         <li>Intro to Digital Logic Design </li>
         <li>Programming Paradigms</li>
         <li>Introduction to Artificial Intelligence</li>
+        </ul>
+      </div>
         <h3>Journalism:</h3>
+        <hr>
+        <div class="bubble-container">
+        <ul>
         <li>Media and Society</li>
         <li>Tech Tools: Audio / Video</li>
         <li>Information Exploration</li>
         <li>Data Storytelling</li>
         <li>Professional Writing</li>
         <li>Visual Storytelling</li>
-    </ul>
-    <script src="script.js"></script>
+        </ul>
+      </div>
+    </div>
+    <script src="../script.js"></script>
 </body>
 </html>

@@ -1,17 +1,31 @@
 :root {
-    --bg-color: #f4ece0;
-    --bg2-color: #f1dec2;
-    --text-color: #485849;
+    --bg-color: #f7e8cd;
+    --container-color:#30579178;
+    --nav-color: #aba08b;
+    --header-color: #39435c;
+    --h-color: rgb(47, 37, 33);
+    --h3-color: rgb(6, 10, 65);
+    --h5-color:rgb(255, 238, 165);
+    --hover-color: #5c6e99c1;
+    --bodytext-color: #fffac8;
+    --download-color:#676e7f;
 }
 body {
     background-color: var(--bg-color);
-    color: var(--text-color);
+    color: var(--bodytext-color);
     transition: background-color 0.3s, color 0.3s;
   }
 body.dark-mode {
-    --bg-color: #485849;
-    --bg2-color: #1c2b1e;
-    --text-color: #f4ece0;
+    --bg-color: #39435c;
+    --container-color: #ffedc9c9;
+    --header-color: #f7e8cd; 
+    --nav-color:  #d1dbfae0;
+    --h-color: rgb(5, 5, 59);
+    --h3-color: rgb(63, 52, 46);
+    --h5-color: rgb(5, 5, 59);
+    --hover-color: #fdf5e5;
+    --bodytext-color: #22335e;
+    --download-color:#fffde7;
 }
   
 #darkModeContainer {
@@ -27,31 +41,30 @@ body.dark-mode {
     padding: 5px;
     border-radius: 50%;
     transition: background-color 0.3s;
-    color: var(--text-color); /* This ensures the SVG color changes with mode */
+    color: var(--h-color);
   }
   
   #darkModeToggle:hover {
-    background-color: rgba(72, 88, 73, 0.1); /* Light mode hover */
+    background-color: var(--hover-color);
   }
   
   body.dark-mode #darkModeToggle:hover {
-    background-color: rgba(244, 236, 224, 0.1); /* Dark mode hover */
+    background-color: var(--hover-color); 
   }
 header {
 
     text-align: center;
 
     margin-top: 30px;
+    color: var(--header-color);
 
 }
 
-/* ... (keep your existing styles) ... */
-
 nav {
-    background-color: var(--bg-color);
+    background-color: var(--nav-color);
     padding: 1rem 0;
-    border-top: 1px solid var(--text-color);
-    border-bottom: 1px solid var(--text-color);
+    border-top: 1px solid var(--h-color);
+    border-bottom: 1px solid var(--h-color);
 }
 
 .nav-menu {
@@ -68,7 +81,7 @@ nav {
 }
 
 .nav-menu a {
-    color: var(--text-color);
+    color: var(--h-color);
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.3s;
@@ -76,7 +89,7 @@ nav {
 
 .nav-menu a:hover, .nav-menu a:focus {
     text-decoration: underline;
-    color: #bfb5a5;
+    color: var(--hover-color);
 }
 
 .nav-toggle {
@@ -110,7 +123,7 @@ nav {
         display: block;
         width: 25px;
         height: 3px;
-        background-color: var(--text-color);
+        background-color: var(--header-color); 
         margin: 5px auto;
     }
 }
@@ -121,6 +134,7 @@ h1 {
     font-size: 36px;
 
     margin-bottom: 10px;
+    color: var(--header-color);
 
 }
 
@@ -137,6 +151,7 @@ img {
     object-fit: cover;
 
     margin-bottom: 20px;
+    
 
 }
 
@@ -155,9 +170,15 @@ h2 {
     font-size: 24px;
 
     margin-bottom: 10px;
+    color: var(--h-color);
 
 }
-
+h3{
+  color: var(--h3-color);
+}
+h5{
+  color: var(--h5-color);
+}
 
 
 ul {
@@ -170,15 +191,15 @@ ul {
 
 a {
 
-    color: #bfb5a5;
+    color: var(--h5-color);
     text-decoration: none;
-    transition: color 0.3s; /* Smooth color transition for hover effects */
+    transition: color 0.3s; 
 
 }
 
 a:hover, a:focus {
-    text-decoration: underline; /* Adds underline on hover or focus */
-    color: #f4ece0; /* Brightens the color on hover for better visibility */
+    text-decoration: underline; 
+    color: var(--h-color);
 }
 
 iframe {
@@ -188,6 +209,9 @@ iframe {
     margin: 0 auto;
 
 }
+.centered {
+  text-align: center;
+}
 
 .portfolio-grid {
     display: grid;
@@ -196,9 +220,9 @@ iframe {
   }
   
   .portfolio-item {
-    background-color: var(--bg2-color);
-    color: var(--text-color);
-    border: 1px solid var(--text-color);
+    background-color: var(--container-color);
+    color: var(--bodytext-color);
+    border: 1px solid var(--h-color);
     box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
     border-radius: 8px;
     overflow: hidden;
@@ -239,14 +263,15 @@ iframe {
     gap: 0.5rem;
     padding: 0.5rem 1rem;
     margin: 1rem;
-    background-color: #24292e;
-    color: white;
+    background-color: var(--header-color);
+    color: var(--bodytext-color);
     border-radius: 4px;
     text-decoration: none;
   }
   
   .project-link:hover {
-    background-color: #2f363d;
+    background-color: var(--bg-color);
+    color: var(--header-color);
   }
   
   .github-icon {
@@ -266,7 +291,7 @@ iframe {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(40, 65, 44, 0.7);
+    background: var(--hover-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -293,10 +318,25 @@ iframe {
   
   .download-btn:hover {
     transform: scale(1.05);
-    background-color: #f0f0f0;
+    background-color: var(--download-color);
   }
   
   .download-btn svg {
     width: 16px;
     height: 16px;
+  }
+  .content-container {
+    margin: 20px auto;  /* Centers container and adds vertical spacing */
+    padding: 10px;      /* Inner spacing */
+    max-width: 800px;   /* Prevents stretching too wide */
+    border-radius: 8px; /* Rounds corners */
+    background-color: var(--nav-color);
+    border: 1px solid var(--h-color);
+  }
+  .bubble-container {
+    margin: 20px auto;  /* Centers container and adds vertical spacing */
+    padding: 10px;      /* Inner spacing */
+    max-width: 800px;   /* Prevents stretching too wide */
+    border-radius: 8px; /* Rounds corners */
+    background-color: var(--container-color);
   }

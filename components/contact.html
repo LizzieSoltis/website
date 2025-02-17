@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="icon" type="image/png" href="../assets/star.png" sizes="32x32">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+    <div id="darkModeContainer">
+        <button id="darkModeToggle" aria-label="Toggle dark mode">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+    </div>
+    <h1 class="centered">Contact Information:</h1>
+    <div class="content-container">
+    <p><a href="mailto:soltis.el@gmail.com">Gmail: soltis.el+jobs@gmail.com</a></p>
+    <p><a href="mailto:e727s272@ku.edu">KU Email: e727s272@ku.edu</a></p>
+    <p>Phone: (720) 391 - 2365</p>
+    </div>
+    <script src="script.js"></script>
+    <div class="content-container">
+      <form action="https://formsubmit.co/soltis.el+website@gmail.com" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        
+        <label for="message">Inquiry:</label>
+        <input type="text" id="messgae" name="message">
+        <!-- Prevents spam -->
+        <input type="hidden" name="_captcha" value="true">
+        <!-- Redirect after submission -->
+        <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">
+    
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+</body>
+<script src="../script.js"></script>
+</html>
