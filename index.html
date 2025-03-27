@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><title>Home Page</title>
+	<!--style sheet-->
+	<link href="style/style.css" rel="stylesheet">
+</head>
+<body>
+	<nav class="navbar">
+		<button class="navbar-toggle" onclick="toggleMenu()">☰</button>
+		<ul class="navbar-menu">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="components/portfolio.html">Portfolio</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">More ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="/components/about.html">About Me</a></li>
+                    <li><a href="components/resume.html">Resume</a></li>
+                    <li class="divider"></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </li>
+		</ul>
+	</nav>
+	<section class="hero">
+		<div class="container">
+			<div class="hero-content">
+				<h1 class="hero-title">Hello World, it's Elizabeth Soltis</h1>
+				<p class="hero-text">As a soon-to-be computer science grad (May 2025) with a concentration in journalism, I have a passion for building intuitive technology, designing user-friendly experiences, and telling compelling stories. Whether through code, design, or storytelling, I aim to create digital experiences that inform, engage, and inspire.</p>
+				<a href="components/about.html" class="button button-primary">About Me »</a>
+		    </div>
+		</div>
+	</section>
+	<!--Social Network Navbar Section-->
+	<section class="socialNetworkNavBar">
+		<div class="socialNetworkNav">
+			<a href="mailto:soltis.el+jobs@gmail.com" target="_blank"><img src="assets/graphics/email.png" alt="email" width="74" height="74"></a>
+		</div>
+		<div class="socialNetworkNav">
+			<a href="https://www.linkedin.com/in/elizabethsoltis0000/" target="_blank"><img src="assets/graphics/linkedin.png" alt="linkedin" width="74" height="74"></a>
+			</div>
+		<div class="socialNetworkNav">
+			<a href="https://github.com/LizzieSoltis" target="_blank"><img src="assets/graphics/github.png" alt="github" width="74" height="74"></a>
+			</div>
+			<div class="socialNetworkNav">
+				<a href="https://lizzielinn.com" target="_blank"><img src="assets/graphics/website.png" alt="portfolio" width="74" height="74"></a>
+			</div>
+	</section>
+	<!--Portfolio Section-->
+	<section class="portfolio">
+		<div class="container">
+			<h2 class="text-center dark-text"><strong><em>Latest Work</em></strong></h2>
+			  <div class="row-grid">
+				<!-- Project 1 -->
+					<div class="project-card">
+					  <h3 class="text-center dark-text">GreekGather</h3>
+						<hr>
+					  <div class="row-grid">
+						  <div class="col-6">
+							<h4 class="text-center warm-text"><strong class="border warm-text"> Project Description</strong></h4>
+                            <p class="text-center dark-text">GreekGather is a web platform designed to streamline membership and event management for Greek organizations. Built with Flask and React.js, it features role-based access control, chapter management, and event scheduling for a seamless user experience.</p>
+                            <a href="https://github.com/kaitlynclements/GreekGather" target="_blank" rel="noopener noreferrer" class="project-link">
+					<img src="assets/graphics/github.png" alt="GreekGather_GitHub">
+					  View Project on GitHub
+				</a>
+                        </div>
+							<div class="col-6">
+								<h4 class="text-center"><strong class="border warm-text">Code Architecture</strong></h4>
+								<code>
+									<pre class="dark-text">
+GreekGather/
+│
+├── backend/
+│   ├── app.py         # Flask application entry point
+│   ├── requirements.txt # Python dependencies
+│   ├── models.py        # Database models
+│   ├── routes/ 	 # Database routes
+│   │   ├── *.py   
+│   └── migrations/      # Database migration files
+│
+├── frontend/
+│   ├── src/
+│   │   ├── App.js       # Main React component
+│   │   ├── index.js     # React entry point
+│   │   ├── components/  # Feature components
+│   │   │   ├── *.jsx # Join, Manage, View Chapter
+│   │   │   ├── *.jsx # Register, Login, Manage Roles
+│   │   │   ├── *.jsx # Events, Navigation, etc    
+│   │   └── styles/
+│   │       └── *.css     # Component-specific styles
+│   └── package.json      # Frontend dependencies
+									</pre>
+								</code>
+							</div>
+					  </div>
+					  
+			  </div>
+</div>
+			<div class="row">
+				<!-- Project 2 -->
+              <div class="col">
+				<div class="project-card">
+					<h3 class="text-center border warm-text">Travel Mate</h3>
+					<hr>
+					  <img src="assets/images/TravelMate_Profile.jpg" alt="TravelMate_Project1" width="500" >
+				  <p class="text-center dark-text">A full-stack web application designed to streamline collaborative travel planning by allowing users to create, manage, and share itineraries. Built with Flask and React.js, it features user authentication, trip organization, and an intuitive interface for seamless travel coordination.</p>
+					<a href="https://github.com/LizzieSoltis/TravelMate" target="_blank" rel="noopener noreferrer" class="project-link">
+					<img src="assets/graphics/github.png" alt="TravelMate_GitHub">
+					  View Project on GitHub
+				</a>
+				  </div>
+			  </div>
+				<!-- Project 3 -->
+				<div class="col">
+				  <div class="project-card">
+					<h3 class="text-center warm-text border"> Personal Website</h3>
+					<hr>
+				    <img src="assets/images/My Profile.png" alt="PersonalWesite_Project2">
+				    <p class="text-center dark-text">A fully responsive portfolio site showcasing projects, experience, and skills with an interactive and user-friendly design. Built with HTML, CSS, and JavaScript, it was recently updated with a modern, reactive design and improved system architecture. The previous version is shown in the image.</p>
+				    <a href="https://github.com/LizzieSoltis/website" target="_blank" rel="noopener noreferrer" class="project-link">
+					<img src="assets/graphics/github.png" alt="Website_GitHub">
+				    View Project on GitHub
+				</a>
+				  </div>
+			  </div>
+</div>
+			</div>
+	</section>
+</body>
+</html>
+<script>
+        function toggleMenu() {
+            document.querySelector('.navbar-menu').classList.toggle('show');
+        }
+
+        function toggleDropdown(event) {
+            event.preventDefault();
+            event.target.nextElementSibling.classList.toggle('show');
+        }
+    </script>

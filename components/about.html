@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>About Page</title>
+<link href="../style/style.css" rel="stylesheet" type="text/css">
+<link href="../style/about.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<nav class="navbar">
+		<button class="navbar-toggle" onclick="toggleMenu()">☰</button>
+		<ul class="navbar-menu">
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="portfolio.html">Portfolio</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">More ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li class="divider"></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </li>
+		</ul>
+	</nav>
+	<!--Profile Header Section-->
+<div class="profile-header">
+    <div class="container">
+        <div class="header-row">
+            <div class="header-col-image">
+                <img src="../assets/images/profilephoto.JPG" alt="Elizabeth Soltis" class="profile-image">
+            </div>
+            <div class="header-col-text">
+                <h1 class="header-title">Elizabeth Soltis</h1>
+                <h3 class="header-subtitle">Front-End Developer</h3>
+            </div>
+        </div>
+    </div>
+</div>
+	<!--Social Network Navbar Section-->
+<section class="socialNetworkNavBar">
+		<div class="socialNetworkNav">
+			<a href="mailto:soltis.el+jobs@gmail.com" target="_blank"><img src="../assets/graphics/email.png" alt="email" width="74" height="74"></a>
+		</div>
+		<div class="socialNetworkNav">
+			<a href="https://www.linkedin.com/in/elizabethsoltis0000/" target="_blank"><img src="../assets/graphics/linkedin.png" alt="linkedin" width="74" height="74"></a>
+  </div>
+		<div class="socialNetworkNav">
+			<a href="https://github.com/LizzieSoltis" target="_blank"><img src="../assets/graphics/github.png" alt="github" width="74" height="74"></a>
+  </div>
+			<div class="socialNetworkNav">
+			  <a href="https://lizzielinn.com" target="_blank"><img src="../assets/graphics/website.png" alt="portfolio" width="74" height="74"></a>
+			</div>
+	</section>
+	<main class="about-container">
+		<section class="about-section">
+		  <p class="text-center">As a senior majoring in Computer Science with a strong interest in integrating technology across diverse fields, I am deeply passionate about using my technical skills to innovate and enhance the way digital systems interact with human needs. My academic journey and practical experiences have equipped me with a robust foundation in programming, systems analysis, and software development, particularly in the contexts of user interface design and mobile app development.
+			  
+			  My dedication to technology is complemented by a commitment to ethical practices in software development, emphasizing the importance of creating secure, efficient, and accessible digital solutions. This commitment is evidenced through my work on projects that prioritize user privacy and data security, aiming to set new standards in the ethical use of technology.
+			  
+		  Beyond coding, I explore the intersection of computer science and visual arts, employing my skills in graphic design to create intuitive and engaging user experiences. This blend of technical prowess and creative acumen enables me to deliver solutions that are not only functionally robust but also aesthetically compelling.</p>
+        </section>
+			<div class="button-container">
+				<a href="portfolio.html" class="button button-primary">View My Portfolio »</a>
+			</div>
+		<section class="content-section">
+		<h2 class="section-title text-center">Course Work</h2>
+		<div class="content-box">
+			<article class="experience-item">
+			  <h4 class="experience-title">Computer Science:</h4>
+				<h5 class="experience-subtitle">101 credit hours | Aug 2021 - May 2025</h5>
+				<div class="row">
+					<div class="col-6">
+						<li>Software Engineering I,II</li>
+						<li>Programming I,II</li>
+						<li>Data Structures and Algorithms</li>
+						<li>Embedded Systems</li>
+						<li>Artificial Intelligence</li>
+						<li>Digital Logic Design</li>
+					</div>
+					<div class="col-6">
+						<li>Operating Systems</li>
+						<li>Machine Learning</li>
+						<li>Programming Paradigms</li>
+						<li>Programming Languages</li>
+						<li>Calc I,II,III; Linear Algebra; Probability and Statstics</li>
+						<li>Physics</li>
+					</div>
+				</div>
+				
+            </article>
+			<article class="experience-item">
+<h4 class="experience-title">Journalism:</h4>
+                        <h5 class="experience-subtitle">26 credit hours&nbsp; | Aug 2023 - May 2025</h5>
+                        <li>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                        </li>
+			</article>
+				</div>
+		</section>
+		<section class="content-section">
+		<h2 class="section-title text-center">Professional Associations</h2>
+		<div class="content-box">
+			<article class="experience-item">
+			  <h4 class="experience-title">iHAWKe:</h4>
+				<h5 class="experience-subtitle">Aug 2021 - May 2025</h5>
+				<li>A University of Kansas club focused on engaging and advising minorities of the
+Engineering School to support students by connecting with mentors.</li>
+            </article>
+			<article class="experience-item">
+<h4 class="experience-title">Women in Computing</h4>
+                        <h5 class="experience-subtitle">Aug 2022 - May 2025</h5>
+                        <li>
+                           A University of Kansas club focused on connecting women majoring in
+computer science with each other, the department, and the industry.
+                        </li>
+			</article>
+			<article class="experience-item">
+<h4 class="experience-title">Kappa Kappa Gamma</h4>
+                        <h5 class="experience-subtitle">Aug 2021 - May 2025</h5>
+                        <li>
+                           Technology Chair: 2022-2024
+                        </li>
+			</article>
+				</div>
+		</section>
+	</main>
+</body>
+</html>
+<script>
+        function toggleMenu() {
+            document.querySelector('.navbar-menu').classList.toggle('show');
+        }
+
+        function toggleDropdown(event) {
+            event.preventDefault();
+            event.target.nextElementSibling.classList.toggle('show');
+        }
+    </script>

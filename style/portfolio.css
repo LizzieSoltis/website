@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/* CSS Document */
+.portfolio-row-grid {
+     display: grid;
+    grid-template-columns: 66% 33%;
+    gap: 1rem;
+    align-items: stretch; /* This ensures full height */
+}
+
+.main-image {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+}
+
+.main-image img {
+    width: 100%;
+    height: 95%;
+    object-fit: cover;
+}
+
+.side-images {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Reduced gap between side images */
+    height: 100%; /* Ensure full height */
+}
+
+.side-images img {
+    width: 100%;
+    flex: 1; 
+    object-fit: cover; 
+    min-height: 0; 
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .row-grid {
+        grid-template-columns: 100%;
+    }
+    
+    .main-image {
+        grid-row: auto;
+    }
+    
+    .side-images {
+        grid-column: 1;
+    }
+}

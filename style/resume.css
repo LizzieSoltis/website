@@ -1,0 +1,157 @@
+@charset "UTF-8";
+@import 'style.css';
+/* CSS Document */
+.resume-container{
+	padding: 1rem 1rem;
+	max-width: auto;
+	margin: 1rem auto;
+}
+/* Header Section */
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-image {
+    width: 150px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.profile-info {
+    flex: 1;
+	padding: 20px;
+	border-radius: .3rem;
+	background-color: var(--primary-blue);
+}
+
+.contact-info {
+    background-color: var(--container-color);
+    padding: 1rem;
+    border-radius: 8px;
+    color: var(--darker-blue);
+}
+
+/* Skills Section */
+.skills-section {
+    margin: 2rem 0;
+}
+
+.skill-bar {
+    margin: 1rem 0;
+}
+
+.skill-name {
+    margin-bottom: 0.5rem;
+    color: var(--darker-blue);
+    display: flex;
+    justify-content: space-between;
+}
+.skill-percentage {
+    color: var(--primary-blue);
+    font-size: 0.9em;
+}
+
+.progress-bar {
+    height: 25px;
+    background-color: var(--container-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+.progress-fill {
+    height: 100%;
+    transition: width 0.3s ease;
+}
+.skill-expert {
+    background-color: var(--primary-blue); /* >= 80% */
+}
+
+.skill-advanced {
+    background-color: #43938A; /* 60-79% */
+}
+
+.skill-intermediate {
+    background-color: #F0BD70; /* 40-69% */
+}
+
+.skill-beginner {
+    background-color: #F2A766; /* 0-39% */
+}
+/* Education Section */
+.education-section {
+    margin: 2rem 0;
+}
+
+.education-item {
+    background-color: var(--container-color);
+    border-radius: 8px;
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+.school-info h3 {
+    color: var(--darker-blue);
+    margin-bottom: 0.5rem;
+}
+
+.degree-info {
+    color: var(--darker-blue);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.graduation-date {
+    color: var(--darker-blue);
+    font-weight: 500;
+}
+
+.achievements {
+    margin-top: 0rem;
+	color: var(--primary-blue);
+}
+
+.achievement-badge {
+    display: inline-block;
+    background-color: var(--darker-blue);
+    color: var(--light-text-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    margin: 0.2rem;
+	margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .resume-header,
+    .profile-section {
+        flex-direction: column;
+    }
+    
+    .profile-image {
+        margin: 0 auto;
+    }
+    
+    .contact-info {
+        text-align: center;
+    }
+	.education-header {
+        flex-direction: column;
+    }
+    
+    .graduation-date {
+        margin-top: 0.5rem;
+    }
+}

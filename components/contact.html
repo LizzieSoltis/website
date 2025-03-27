@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>contact</title>
+<link href="../style/style.css" rel="stylesheet" type="text/css">
+<link href="../style/resume.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<nav class="navbar">
+		<button class="navbar-toggle" onclick="toggleMenu()">☰</button>
+		<ul class="navbar-menu">
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="portfolio.html">Portfolio</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">More ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li class="divider"></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </li>
+		</ul>
+	</nav>
+	<h2 class="section-title text-center dark-text"><em>Contact Me</em></h2>
+	<!--Social Network Navbar Section-->
+<section class="socialNetworkNavBar">
+		<div class="socialNetworkNav">
+			<a href="mailto:soltis.el+jobs@gmail.com" target="_blank"><img src="../assets/graphics/email.png" alt="email" width="74" height="74"></a>
+		</div>
+		<div class="socialNetworkNav">
+			<a href="https://www.linkedin.com/in/elizabethsoltis0000/" target="_blank"><img src="../assets/graphics/linkedin.png" alt="linkedin" width="74" height="74"></a>
+  </div>
+		<div class="socialNetworkNav">
+			<a href="https://github.com/LizzieSoltis" target="_blank"><img src="../assets/graphics/github.png" alt="github" width="74" height="74"></a>
+  </div>
+			<div class="socialNetworkNav">
+				<a href="https://lizzielinn.com" target="_blank"><img src="../assets/graphics/website.png" alt="portfolio" width="74" height="74"></a>
+			</div>
+	</section>
+	<!-- Contact Form -->
+        <section class="contact-section">
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name" class="warm-text">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="warm-text">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="warm-text">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="button button-secondary">Send Message</button>
+          </form>
+</section>
+</body>
+</html>
+<script>
+        function toggleMenu() {
+            document.querySelector('.navbar-menu').classList.toggle('show');
+        }
+
+        function toggleDropdown(event) {
+            event.preventDefault();
+            event.target.nextElementSibling.classList.toggle('show');
+        }
+    </script>
