@@ -225,14 +225,46 @@
         </section>
 	</main>
 </body>
-</html>
 <script>
-        function toggleMenu() {
-            document.querySelector('.navbar-menu').classList.toggle('show');
-        }
+    function toggleMenu() {
+        document.querySelector('.navbar-menu').classList.toggle('show');
+    }
 
-        function toggleDropdown(event) {
-            event.preventDefault();
-            event.target.nextElementSibling.classList.toggle('show');
-        }
-    </script>
+    function toggleDropdown(event) {
+        event.preventDefault();
+        event.target.nextElementSibling.classList.toggle('show');
+    }
+
+    (function() {
+    // https://dashboard.emailjs.com/admin/account
+        emailjs.init('EWQXbgyJa-NBk2BN2');
+    
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Show sending status
+        const btn = this.querySelector('button[type="submit"]');
+        const originalText = btn.textContent;
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+
+        emailjs.sendForm('service_websiteEmail', 'template_msgWebsite', this)
+            .then(function() {
+                btn.textContent = 'Message Sent!';
+                document.getElementById('contact-form').reset();
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                }, 3000);
+            }, function(error) {
+                btn.textContent = 'Failed to send';
+                console.log('FAILED...', error);
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                }, 3000);
+            });
+    });
+})();
+</script>
+</html>

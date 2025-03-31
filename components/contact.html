@@ -5,6 +5,7 @@
 <title>contact</title>
 <link href="../style/style.css" rel="stylesheet" type="text/css">
 <link href="../style/resume.css" rel="stylesheet" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -42,7 +43,7 @@
 	</section>
 	<!-- Contact Form -->
         <section class="contact-section">
-            <form class="contact-form">
+            <form class="contact-form" id="contact-form">
                 <div class="form-group">
                     <label for="name" class="warm-text">Name</label>
                     <input type="text" id="name" name="name" required>
@@ -58,15 +59,47 @@
                 <button type="submit" class="button button-secondary">Send Message</button>
           </form>
 </section>
+<script>
+    function toggleMenu() {
+        document.querySelector('.navbar-menu').classList.toggle('show');
+    }
+
+    function toggleDropdown(event) {
+        event.preventDefault();
+        event.target.nextElementSibling.classList.toggle('show');
+    }
+
+    (function() {
+    // https://dashboard.emailjs.com/admin/account
+        emailjs.init('EWQXbgyJa-NBk2BN2');
+    
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Show sending status
+        const btn = this.querySelector('button[type="submit"]');
+        const originalText = btn.textContent;
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+
+        emailjs.sendForm('service_websiteEmail', 'template_msgWebsite', this)
+            .then(function() {
+                btn.textContent = 'Message Sent!';
+                document.getElementById('contact-form').reset();
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                }, 3000);
+            }, function(error) {
+                btn.textContent = 'Failed to send';
+                console.log('FAILED...', error);
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                }, 3000);
+            });
+    });
+})();
+</script>
 </body>
 </html>
-<script>
-        function toggleMenu() {
-            document.querySelector('.navbar-menu').classList.toggle('show');
-        }
-
-        function toggleDropdown(event) {
-            event.preventDefault();
-            event.target.nextElementSibling.classList.toggle('show');
-        }
-    </script>
